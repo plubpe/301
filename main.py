@@ -16,13 +16,13 @@ def on_forever():
         pins.digital_write_pin(DigitalPin.P1, 0)
         pins.digital_write_pin(DigitalPin.P2, 1)
         pins.digital_write_pin(DigitalPin.P8, 0)
-        basic.pause(100)
+        basic.pause(500)
     elif l==1 and r==0 :
         pins.digital_write_pin(DigitalPin.P0, 1)
         pins.digital_write_pin(DigitalPin.P1, 0)
         pins.digital_write_pin(DigitalPin.P2, 0)
         pins.digital_write_pin(DigitalPin.P8, 0)
-        basic.pause(100)
+        basic.pause(500)
     else:
         pins.digital_write_pin(DigitalPin.P0, 0)
         pins.digital_write_pin(DigitalPin.P1, 0)
