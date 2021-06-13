@@ -1,3 +1,5 @@
+pins.analog_set_period(AnalogPin.P0, 20000)
+pins.analog_set_period(AnalogPin.P2, 20000)
 pins.set_pull(DigitalPin.P12, PinPullMode.PullUp)
 pins.set_pull(DigitalPin.P13, PinPullMode.PullUp)
 serial.write_line("asd")
@@ -7,18 +9,18 @@ def on_forever():
     serial.write_value("l", l)
     serial.write_value("r", r)
     if l==0 and r==0 :
-        pins.digital_write_pin(DigitalPin.P0, 1)
+        pins.analog_write_pin(AnalogPin.P0, 400)
         pins.digital_write_pin(DigitalPin.P1, 0)
-        pins.digital_write_pin(DigitalPin.P2, 1)
+        pins.analog_write_pin(AnalogPin.P2, 400)
         pins.digital_write_pin(DigitalPin.P8, 0)
     elif l==0 and r==1 :
         pins.digital_write_pin(DigitalPin.P0, 0)
         pins.digital_write_pin(DigitalPin.P1, 0)
-        pins.digital_write_pin(DigitalPin.P2, 1)
+        pins.analog_write_pin(AnalogPin.P2, 400)
         pins.digital_write_pin(DigitalPin.P8, 0)
         basic.pause(500)
     elif l==1 and r==0 :
-        pins.digital_write_pin(DigitalPin.P0, 1)
+        pins.analog_write_pin(AnalogPin.P0, 400)
         pins.digital_write_pin(DigitalPin.P1, 0)
         pins.digital_write_pin(DigitalPin.P2, 0)
         pins.digital_write_pin(DigitalPin.P8, 0)
